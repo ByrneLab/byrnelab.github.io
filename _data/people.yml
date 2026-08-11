@@ -1,79 +1,38 @@
 # Lab members.
 #
-# To add someone:
-#   1. Drop a square-ish photo in assets/images/people/ (e.g. jane-doe.jpg)
-#   2. Add an entry below. `group` controls which heading they appear under
-#      (see the group order in people.md). `links` is optional.
+# Fields:
+#   name   (required)
+#   role   (optional) — job title, e.g. "Postdoctoral fellow"
+#   group  (optional) — pi | postdocs | students | staff
+#   photo  (optional) — filename in assets/images/people/
+#   links  (optional) — list of {label, url}
 #
-# - name: Jane Doe
-#   role: Postdoctoral fellow
-#   photo: jane-doe.jpg
-#   group: postdocs
-#   links:
-#     - label: Google Scholar
-#       url: https://scholar.google.com/...
+# With no `role` or `group`, everyone renders as one flat grid with initials
+# avatars. Add `role` and `group` and the page automatically splits into
+# headed sections (Principal Investigator, Postdoctoral Fellows, Students,
+# Staff). Adding a `photo` replaces that person's initials with the image.
+#
+# Example of a fully specified entry:
+#   - name: Jane Doe
+#     role: Postdoctoral fellow
+#     group: postdocs
+#     photo: jane-doe.jpg
+#     links:
+#       - label: Google Scholar
+#         url: https://scholar.google.com/...
 
-- name: Alessandra Larimer-Picciani
-  role: MD/PhD candidate
-  photo: alessandra-larimer-picciani.jpg
-  group: students
-
-- name: Anfisa Ayalon
-  role: Postdoctoral fellow
-  photo: anfisa-ayalon.jpg
-  group: postdocs
-
-- name: Aman Virmani
-  role: Bioinformatics specialist
-  photo: aman-virmani.jpg
-  group: staff
+- name: Robin Chambers
 
 - name: Katelin Samski
-  role: Postdoctoral fellow
-  photo: katelin-samski.jpg
-  group: postdocs
 
-- name: Hamzah Aweidah
-  role: Postdoctoral fellow
-  photo: hamzah-aweidah.jpg
-  group: postdocs
+- name: Sarah Shannon
 
-- name: Lora Waybright
-  role: Project manager
-  photo: lora-waybright.jpg
-  group: staff
+- name: Luke Simpson
 
-- name: Sushma Sappa
-  role: AAV packaging specialist
-  photo: sushma-sappa.jpg
-  group: staff
+- name: Kamala Bhatt
 
-- name: Avigail Beryozkin
-  role: Postdoctoral fellow
-  photo: avigail-beryozkin.jpg
-  group: postdocs
+- name: Elizabeth Baxter
 
-- name: Max Lohss
-  role: PSTP medical student
-  photo: max-lohss.jpg
-  group: students
+- name: Luca Jacob
 
-- name: Jean-Baptiste Couzy
-  role: Project manager
-  photo: jean-baptiste-couzy.jpg
-  group: staff
-
-- name: Wyatt Kriebel
-  role: Undergraduate researcher
-  photo: wyatt-kriebel.jpg
-  group: students
-
-- name: Annapurni Sriram
-  role: Medical student
-  photo: annapurni-sriram.jpg
-  group: students
-
-- name: Mahija Nukala
-  role: Undergraduate researcher
-  photo: mahija-nukala.jpg
-  group: students
+- name: Dani Sivadasun Bindu

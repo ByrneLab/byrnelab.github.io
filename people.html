@@ -9,38 +9,58 @@ description: Members of the Byrne Lab at the University of Pittsburgh.
   <h1 class="page-title">People</h1>
 
   {% comment %}
-    Group order and headings. A person's `group` in _data/people.yml must
-    match one of these keys; anyone with an unrecognised or missing group
-    falls into the "Other" bucket below so they never silently disappear.
+    If nobody has a `group` set, render one flat grid with no headings —
+    that's the clean state before roles are filled in. As soon as any person
+    gets a group, the page switches to headed sections automatically.
   {% endcomment %}
   {% assign group_keys = "pi,postdocs,students,staff" | split: "," %}
   {% assign group_names = "Principal Investigator,Postdoctoral Fellows,Students,Staff" | split: "," %}
 
-  {% for key in group_keys %}
-    {% assign members = site.data.people | where: "group", key %}
-    {% if members.size > 0 %}
-      <h2 class="people-group-title">{{ group_names[forloop.index0] }}</h2>
+  {% assign grouped_count = 0 %}
+  {% for person in site.data.people %}
+    {% if group_keys contains person.group %}
+      {% assign grouped_count = grouped_count | plus: 1 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if grouped_count == 0 %}
+
+    <div class="people-grid">
+      {% for person in site.data.people %}
+        {% include person.html person=person %}
+      {% endfor %}
+    </div>
+
+  {% else %}
+
+    {% for key in group_keys %}
+      {% assign members = site.data.people | where: "group", key %}
+      {% if members.size > 0 %}
+        <h2 class="people-group-title">{{ group_names[forloop.index0] }}</h2>
+        <div class="people-grid">
+          {% for person in members %}
+            {% include person.html person=person %}
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endfor %}
+
+    {% comment %} Anyone with a missing or misspelled group still shows up. {% endcomment %}
+    {% assign ungrouped = "" | split: "," %}
+    {% for person in site.data.people %}
+      {% unless group_keys contains person.group %}
+        {% assign ungrouped = ungrouped | push: person %}
+      {% endunless %}
+    {% endfor %}
+
+    {% if ungrouped.size > 0 %}
+      <h2 class="people-group-title">Lab members</h2>
       <div class="people-grid">
-        {% for person in members %}
+        {% for person in ungrouped %}
           {% include person.html person=person %}
         {% endfor %}
       </div>
     {% endif %}
-  {% endfor %}
 
-  {% assign ungrouped = "" | split: "," %}
-  {% for person in site.data.people %}
-    {% unless group_keys contains person.group %}
-      {% assign ungrouped = ungrouped | push: person %}
-    {% endunless %}
-  {% endfor %}
-
-  {% if ungrouped.size > 0 %}
-    <h2 class="people-group-title">Other</h2>
-    <div class="people-grid">
-      {% for person in ungrouped %}
-        {% include person.html person=person %}
-      {% endfor %}
-    </div>
   {% endif %}
 </div>

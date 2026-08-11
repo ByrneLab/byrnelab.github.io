@@ -4,17 +4,104 @@
 # Fields: year, authors, title, venue, url (optional), doi (optional),
 #         pubmed (optional), note (optional, e.g. "Preprint", "* equal contribution")
 
-- year: 2024
+- year: 2026
   authors: >-
-    Jing He, BaDoi N Phan, Willa G Kerkhoff, Aydin Alikaya, Olivia R Brull,
-    J Megan Fredericks, Tao Hong, Morgan Sedorovitz, Chaitanya Srinivasan,
-    Michael J Leone, Olivia M Wirfel, Samuel Dauby, Rachel K Tittle, Meng K Lin,
-    Andreea C Bostan, Bryan M Hooks, Omar A Gharbawie, Leah C Byrne,
-    Andreas R Pfenning, William R Stauffer
-  title: Cell Type Specific Enhancers for Dorsolateral Prefrontal Cortex
-  venue: bioRxiv 2024.12.01.626253
+    Lim J, Larimer-Picciani AM, Moshiri A, Wang JK, Takahashi N, Raposo ACS,
+    Motta MJ, Byrne LC, Thomasy SM
+  title: >-
+    Ocular safety and efficacy of AAV-mediated tyrosinase gene augmentation in a
+    nonhuman primate model
+  venue: bioRxiv 2026.07.13.738268
   note: Preprint
-  doi: https://doi.org/10.1101/2024.12.01.626253
+  doi: https://doi.org/10.64898/2026.07.13.738268
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/42523373/
+
+- year: 2026
+  authors: >-
+    Johnson ME, Ozturk BE, Tugwell TH, Lambros M, Janowitz HN, Flohr K,
+    Sedorovitz M, Campello L, Hartung JE, Hogle B, Gillespie M, Schriever H,
+    Aweidah H, Koester J, Clausen I, Seeber S, Revelant F, Schreurs R, Koechl F,
+    Sieving PA, Sahel JA, Stauffer WR, Peixoto RT, Fauser S, Lin R, Conway JF,
+    da Silva S, Krol J, Betegon M, Byrne LC
+  title: >-
+    Structural dynamics insights into principles underlying the fitness of new
+    broadly potent AAVs
+  venue: bioRxiv 2026.03.24.713814
+  note: Preprint
+  doi: https://doi.org/10.64898/2026.03.24.713814
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/41928948/
+
+- year: 2026
+  authors: Kriebel WG, Larimer-Picciani AM, Nukala M, Sahel JA, Byrne LC
+  title: Quantifying functional vision in a mouse model of oculocutaneous albinism type 1
+  venue: "Scientific Reports 16(1):14563"
+  doi: https://doi.org/10.1038/s41598-026-45301-x
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/41872298/
+
+- year: 2026
+  authors: >-
+    Westbay JH, Bigley DP, Sappa S, Ayalon A, Aweidah H, Dignam LD, Martel JN,
+    Beltran WA, Sahel JA, Byrne LC, DiLeo MV
+  title: >-
+    Synthesis and characterization of an injectable telechelic material for the
+    epiretinal delivery of retinal gene therapies
+  venue: "Journal of Materials Chemistry B 14(12):3703-3718"
+  doi: https://doi.org/10.1039/d6tb00267f
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/41778383/
+
+- year: 2026
+  authors: >-
+    Lohss M, Samski KS, Liasis A, Aweidah H, Komatsu C, Beale O, Lee DMW,
+    Rossi EA, Shroff SG, Sahel JA, Stefko ST, Byrne LC
+  title: A mobile system for whole eye perfusion supporting retinal function and surgery
+  venue: "Frontiers in Bioengineering and Biotechnology 13:1699876"
+  doi: https://doi.org/10.3389/fbioe.2025.1699876
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/41625069/
+
+- year: 2025
+  authors: >-
+    Sudharsan R, Murgiano L, Ahuja A, Sato Y, Kwok J, Dolgova N, Savina S,
+    Sedorovitz M, Dufour VL, Aguirre GD, Byrne LC, Beltran WA
+  title: >-
+    Novel photoreceptor-specific promoters for gene therapy in mid- to
+    late-stage retinal degeneration
+  venue: "Molecular Therapy 33(9):4320-4337"
+  doi: https://doi.org/10.1016/j.ymthe.2025.05.020
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/40405464/
+
+- year: 2025
+  authors: >-
+    He J, Phan BN, Kerkhoff WG, Alikaya A, Hong T, Brull OR, Fredericks JM,
+    Sedorovitz M, Srinivasan C, Leone MJ, Wirfel OM, Brown A, Dauby S,
+    Tittle RK, Lin MK, Hooks BM, Bostan AC, Gharbawie OA, Byrne LC,
+    Pfenning AR, Stauffer WR
+  title: Machine learning identification of enhancers in the rhesus macaque genome
+  venue: "Neuron 113(10):1548-1561.e8"
+  doi: https://doi.org/10.1016/j.neuron.2025.04.030
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/40403706/
+
+- year: 2025
+  authors: Sedorovitz M, Byrne LC, Betegon M
+  title: Chromatographic purification and polishing of AAV particles
+  venue: "Methods in Molecular Biology 2848:249-257"
+  doi: https://doi.org/10.1007/978-1-0716-4087-6_15
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/39240527/
+
+- year: 2025
+  authors: Vats A, Xi Z, Byrne LC, Chen Y
+  title: >-
+    Retinal explant culture from mouse, human, and nonhuman primates and its
+    applications in vision research
+  venue: "Methods in Molecular Biology 2848:169-186"
+  doi: https://doi.org/10.1007/978-1-0716-4087-6_11
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/39240523/
+
+- year: 2025
+  authors: Beryozkin A, Byrne LC
+  title: In vivo imaging of rodent retina in retinal disease
+  venue: "Methods in Molecular Biology 2848:151-167"
+  doi: https://doi.org/10.1007/978-1-0716-4087-6_10
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/39240522/
 
 - year: 2023
   authors: Levochkina M, Beryozkin A, Aweidah H, Beale O, Byrne L
@@ -126,14 +213,26 @@
   venue: International Ophthalmology Clinics 61(3):35-57
   doi: https://doi.org/10.1097/IIO.0000000000000360
 
+- year: 2021
+  authors: >-
+    Lambert JT, Su-Feher L, Cichewicz K, Warren TL, Zdilar I, Wang Y, Lim KJ,
+    Haigh JL, Morse SJ, Canales CP, Stradleigh TW, Castillo Palacios E,
+    Haghani V, Moss SD, Parolini H, Quintero D, Shrestha D, Vogt D, Byrne LC,
+    Nord AS
+  title: Parallel functional testing identifies enhancers active in early postnatal mouse brain
+  venue: "eLife 10:e69479"
+  doi: https://doi.org/10.7554/eLife.69479
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/34605404/
+
 - year: 2020
   authors: >-
-    Byrne LC, Day TP, Visel M, Fortuny C, Dalkara D, Merigan WH, Schaffer DV,
-    Flannery JG
-  title: In vivo directed evolution of AAV in the primate retina
-  venue: JCI Insight
+    Byrne LC, Day TP, Visel M, Strazzeri JA, Fortuny C, Dalkara D, Merigan WH,
+    Schaffer DV, Flannery JG
+  title: In vivo-directed evolution of adeno-associated virus in the primate retina
+  venue: "JCI Insight 5(10):e135112"
   url: https://insight.jci.org/articles/view/135112
   doi: https://doi.org/10.1172/jci.insight.135112
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/32271719/
 
 - year: 2018
   authors: Day TP, Byrne LC, Flannery JG, Schaffer DV
@@ -142,6 +241,41 @@
     Capsids in Nonhuman Primate Retinas
   venue: "Methods in Molecular Biology 1715:239-249"
   url: https://link.springer.com/protocol/10.1007/978-1-4939-7522-8_17
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/29188518/
+
+- year: 2017
+  authors: Gaj T, Ojala DS, Ekman FK, Byrne LC, Limsirichai P, Schaffer DV
+  title: >-
+    In vivo genome editing improves motor function and extends survival in a
+    mouse model of ALS
+  venue: "Science Advances 3(12):eaar3952"
+  doi: https://doi.org/10.1126/sciadv.aar3952
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/29279867/
+
+- year: 2017
+  authors: Byrne LC
+  title: "Anti-VEGF AAV2 injections: the fewer the better"
+  venue: "Science Translational Medicine 9(393):eaan4921"
+  note: Commentary
+  doi: https://doi.org/10.1126/scitranslmed.aan4921
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/28592565/
+
+- year: 2017
+  authors: Byrne LC
+  title: "What's old is new again: autologous stem cell transplant for AMD"
+  venue: "Science Translational Medicine 9(387):eaan2783"
+  note: Commentary
+  doi: https://doi.org/10.1126/scitranslmed.aan2783
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/28446683/
+
+- year: 2016
+  authors: Shen SQ, Myers CA, Hughes AE, Byrne LC, Flannery JG, Corbo JC
+  title: >-
+    Massively parallel cis-regulatory analysis in the mammalian central nervous
+    system
+  venue: "Genome Research 26(2):238-55"
+  doi: https://doi.org/10.1101/gr.193789.115
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/26576614/
 
 - year: 2015
   authors: >-
@@ -156,12 +290,22 @@
   pubmed: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382269/
 
 - year: 2015
-  authors: Byrne LC, Lee T, Flannery JG, Dalkara D
+  authors: Byrne LC, Lin YJ, Lee T, Schaffer DV, Flannery JG
   title: >-
     The expression pattern of systemically injected AAV9 in the developing
     mouse retina is determined by age
   venue: "Molecular Therapy 23(2):290-6"
   doi: https://doi.org/10.1038/mt.2014.181
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/25224467/
+
+- year: 2015
+  authors: >-
+    Xue Y, Shen SQ, Jui J, Rupp AC, Byrne LC, Hattar S, Flannery JG, Corbo JC,
+    Kefalov VJ
+  title: CRALBP supports the mammalian retinal visual cycle and cone vision
+  venue: "Journal of Clinical Investigation 125(2):727-38"
+  doi: https://doi.org/10.1172/JCI79651
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/25607845/
 
 - year: 2015
   authors: >-
@@ -199,3 +343,24 @@
   venue: "Science Translational Medicine 5(189):189ra76"
   note: D Dalkara and LC Byrne contributed equally
   url: https://www.science.org/doi/10.1126/scitranslmed.3005708
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/23761039/
+
+- year: 2013
+  authors: >-
+    Byrne LC, Khalid F, Lee T, Zin EA, Greenberg KP, Visel M, Schaffer DV,
+    Flannery JG
+  title: >-
+    AAV-mediated, optogenetic ablation of Müller glia leads to structural and
+    functional changes in the mouse retina
+  venue: "PLoS One 8(9):e76075"
+  doi: https://doi.org/10.1371/journal.pone.0076075
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/24086689/
+
+- year: 2012
+  authors: Dalkara D, Byrne LC, Lee T, Hoffmann NV, Schaffer DV, Flannery JG
+  title: >-
+    Enhanced gene delivery to the neonatal retina through systemic
+    administration of tyrosine-mutated AAV9
+  venue: "Gene Therapy 19(2):176-81"
+  doi: https://doi.org/10.1038/gt.2011.163
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/22011645/

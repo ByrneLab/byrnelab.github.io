@@ -84,19 +84,36 @@ with open(os.path.join(ROOT, "_config.yml"), encoding="utf-8") as fh:
 EXCLUDED = set(config.get("exclude") or []) | {"README.md"}
 
 # --------------------------------------------------------- required data fields
-for i, p in enumerate(data.get("people") or []):
-    for field in ("name", "role", "group"):
-        if not p.get(field):
-            err(f"_data/people.yml[{i}]: missing '{field}'")
+people = data.get("people") or []
+
+# Only `name` is required. `role`, `group` and `photo` are all optional — the
+# People page renders a flat grid of initials when they're absent.
+for i, p in enumerate(people):
+    if not p.get("name"):
+        err(f"_data/people.yml[{i}]: missing 'name'")
 
 valid_groups = {"pi", "postdocs", "students", "staff"}
-for p in data.get("people") or []:
-    if p.get("group") not in valid_groups:
-        warn(f"people.yml: '{p.get('name')}' has group "
-             f"'{p.get('group')}' — will fall into the 'Other' bucket")
+grouped = [p for p in people if p.get("group")]
 
-if not any((p.get("group") == "pi") for p in (data.get("people") or [])):
-    warn("people.yml: no entry with group 'pi' — the PI is not listed on the People page")
+if grouped:
+    # Groups are in use, so a bad or missing one is now meaningful.
+    for p in people:
+        if p.get("group") not in valid_groups:
+            warn(f"people.yml: '{p.get('name')}' has group "
+                 f"'{p.get('group')}' — falls into the catch-all section")
+    if not any(p.get("group") == "pi" for p in people):
+        warn("people.yml: groups are in use but no entry has group 'pi' — "
+             "the PI is not listed on the People page")
+
+roled = [p for p in people if p.get("role")]
+if roled and len(roled) != len(people):
+    warn(f"people.yml: {len(roled)} of {len(people)} entries have a 'role' — "
+         "the rest will show a name with no title under it")
+
+photoed = [p for p in people if p.get("photo")]
+if photoed and len(photoed) != len(people):
+    warn(f"people.yml: {len(photoed)} of {len(people)} entries have a photo — "
+         "the rest render initials, so the grid will look mixed")
 
 for i, g in enumerate(data.get("gallery") or []):
     for field in ("file", "alt"):

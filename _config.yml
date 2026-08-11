@@ -10,9 +10,6 @@ baseurl: ""
 institution: University of Pittsburgh
 address: Byrne Lab, Mercy Pavilion, 1622 Locust St, Pittsburgh, PA 15219
 
-social:
-  mastodon: https://sciencemastodon.com/@ByrneLabScience
-
 # Full publication list (NCBI My Bibliography)
 bibliography_url: https://www.ncbi.nlm.nih.gov/sites/myncbi/1b1OChnllzr5w/bibliography/44716067/public/?direction=ascending&sort=date
 
