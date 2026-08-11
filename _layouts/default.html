@@ -16,6 +16,18 @@
 
   <link rel="canonical" href="{{ page.url | absolute_url }}">
   <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+
+  {% comment %}
+    Abel (headings) and Source Code Pro (body) — the same pair the Squarespace
+    site used. Both are SIL Open Font License, served from Google Fonts.
+    Abel has one weight only; Source Code Pro loads 400, 600 and italic.
+    `display=swap` renders fallback text immediately rather than blocking.
+  {% endcomment %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Abel&family=Source+Code+Pro:ital,wght@0,400;0,600;1,400&display=swap">
+
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
