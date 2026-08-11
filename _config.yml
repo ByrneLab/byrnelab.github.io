@@ -47,7 +47,10 @@ exclude:
   - Gemfile.lock
   - README.md
   - fetch_images.py
+  - fetch_pub_figures.py
+  - prepare_pub_image.py
   - verify_site.py
+  - pub-figures-review
   - fetch.log
   - vendor
   - .github

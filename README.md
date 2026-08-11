@@ -198,9 +198,92 @@ Add to the **top** of `_data/publications.yml` (newest first):
   doi: https://doi.org/10.xxxx/xxxxx
   pubmed: https://pubmed.ncbi.nlm.nih.gov/xxxxxxxx/   # optional
   note: Preprint                                       # optional
+  image: my-figure.jpg                                 # optional thumbnail
 ```
 
 Only `year`, `authors`, `title`, `venue` are required.
+
+### Publication thumbnails
+
+Add `image: filename.jpg` and drop the file in `assets/images/pubs/`. It renders
+as an 88px thumbnail on the right of the entry, linking to the paper.
+
+Entries without an image are unaffected — the thumbnail column collapses, so
+the text stays aligned down the whole list. You can add images to as few or as
+many papers as you like without the page looking half-finished.
+
+`verify_site.py` fails if an `image:` filename doesn't exist on disk.
+
+#### Two helper scripts
+
+**1. Pull what's legally reusable.** `fetch_pub_figures.py` checks each paper
+against the PMC Open Access subset and downloads figures only where the licence
+permits reuse (CC BY and similar). It never scrapes subscription journals.
+
+```bash
+python3 -m pip install pyyaml pillow
+python3 fetch_pub_figures.py --list      # table only, no downloads
+python3 fetch_pub_figures.py             # fetch everything permitted
+python3 fetch_pub_figures.py --strict    # also skip no-derivatives licences
+python3 fetch_pub_figures.py --pmid 34664552   # one paper, for debugging
+```
+
+Licences are sorted into four buckets. `CC BY`/`CC0` are fetched outright.
+`CC BY-NC` is fetched (non-commercial covers a lab site). `CC BY-NC-ND` is
+fetched but **flagged**, because a no-derivatives licence doesn't permit
+cropping a panel — you're an author and retain your own reuse rights, so the
+call is yours; `--strict` skips them instead. Anything with no licence is left
+for you to source.
+
+It tries the OA tar package first and falls back to reading figures off the PMC
+article page. Failures print the URL that failed.
+
+Figures land in `pub-figures-review/<slug>/` — a scratch folder, gitignored,
+not part of the site. The report at the end lists every paper it *couldn't*
+take, with a link, so you know exactly what needs doing by hand.
+
+Set `NCBI_API_KEY` in your environment to raise the rate limit.
+
+**2. Turn a figure into a thumbnail.** `prepare_pub_image.py` squares it,
+resizes to 400px, writes it to `assets/images/pubs/`, and adds the `image:`
+line to the right entry in `publications.yml` automatically.
+
+```bash
+# whole figure, centre-cropped
+python3 prepare_pub_image.py path/to/figure.tif --pmid 34664552
+
+# crop one panel first — left,top,right,bottom in source pixels
+python3 prepare_pub_image.py fig1.png --pmid 36509783 --crop 0,0,900,900
+
+# pick the filename yourself
+python3 prepare_pub_image.py fig.png --pmid 34664552 --name scaavengr.jpg
+```
+
+It matches the paper by PMID, so it can't attach an image to the wrong entry.
+Running it twice on the same paper replaces the image rather than duplicating
+the field. It edits `publications.yml` line-by-line, so comments and formatting
+survive.
+
+**Crop to a single panel.** At 88px a full multi-panel figure is an unreadable
+grey smear. One panel — a micrograph, a UMAP, a capsid structure — reads well.
+
+#### Licensing
+
+Your papers split two ways:
+
+- **Open access** (eLife, Nature Communications, Scientific Reports, PLoS One,
+  npj Regenerative Medicine, Science Advances, Frontiers, HardwareX, bioRxiv):
+  CC BY, reusable with attribution. `fetch_pub_figures.py` handles these.
+- **Subscription** (Cell, Neuron, Molecular Therapy, Current Biology, JCI, Gene
+  Therapy, Science Translational Medicine, Genome Research, the Springer
+  Methods volumes): copyright generally sits with the publisher. As an author
+  you typically retain the right to reuse your own figures on a lab website,
+  but that's a call to make per publisher. The script deliberately skips these
+  — use your own original figure files instead.
+
+Note that "Free PMC article" on PubMed means free to *read*, not free to
+*reuse*. Many are NIH author-manuscript deposits with no reuse licence, which
+is why the script checks the licence field rather than trusting availability.
 
 ### Other edits
 

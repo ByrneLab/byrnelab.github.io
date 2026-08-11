@@ -52,10 +52,30 @@ IMAGES = [
     ("people", "mahija-nukala", "1693c094-1d00-47ac-99f3-2b52813f66ac/Mahija.jpeg", 700),
     # Join
     ("", "mercy-pavilion", "54fbd815-1796-47bc-9f17-e74648267597/mercy%2Bpavillion.jpeg", 1600),
-    # Publications highlights
+    # Publication thumbnails. These were the per-paper figures on the
+    # Squarespace publications page — the lab's own choice of panel for each
+    # paper, which is why they're worth preserving rather than re-deriving.
     ("pubs", "frontiers-young-minds", "3d1acbac-506e-42d5-89fd-851fc330698f/FYM.jpeg", 1000),
     ("pubs", "rdcvf", "d4a69c39-2857-4b14-845f-cd0fd76bef7f/rdcvf.jpg", 1000),
     ("pubs", "umap", "e58b565c-37ce-426e-99f8-ca4cf2193d1f/umap.jpg", 1000),
+    ("pubs", "2023-aweidah", "e2c7fbda-1e72-4517-aa68-8706f83bd947/Figure+3.jpg", 800),
+    ("pubs", "2023-lohss-clamp", "ed3e7b56-af94-4578-8102-5ab8b41f8132/clamp.jpg", 800),
+    ("pubs", "2023-zin", "14b7ef84-11b8-48ca-87e6-ecd73ec1ff9e/fig.png", 800),
+    ("pubs", "2022-xi-erg", "0a1b3f2b-fb51-4fa8-8e47-edf869a5e7c4/erg.png", 800),
+    ("pubs", "2022-rodrigues-organoid", "9b24c974-c78f-41c3-a495-f89e8c661126/organoid.png", 800),
+    ("pubs", "2022-xi-retina", "b37aac59-1745-48f2-93a5-e7f47b7b2e32/retina.png", 800),
+    ("pubs", "2022-lawler", "9aa21ea4-e59c-4afd-9f4f-6701c3a760cc/fig1.png", 800),
+    ("pubs", "2022-miyadera", "754cbd2a-1610-452d-8604-16abb12c0bc4/invert.png", 800),
+    ("pubs", "2021-he-striatum", "dbd4ac40-6e3c-424e-be7a-6fd3081b1881/nudap.png", 800),
+    ("pubs", "2021-gemayel", "5a4beeca-ec3b-467a-a641-1a7b4bbd7974/Picture1.jpg", 800),
+    ("pubs", "2020-byrne-fovea", "dca86098-76d3-4b9e-b3e7-21c62bdbc031/fov.png", 800),
+    ("pubs", "2018-day-nab", "09a99785-09d8-41be-b1c4-a86f980e8ebe/nab.png", 800),
+    ("pubs", "2015-byrne-aav9",
+     "575e4bcb-725b-4f11-b97d-e7cca7bffc70/Dual+injections+10X+zoomed+out+snap+DAPI%2BeGFP%2BmCherry+adjusted.jpg", 800),
+    ("pubs", "2015-byrne-rdcvf-cones", "05ede9fe-3d37-49b2-baef-c26169bf9cef/cones.png", 800),
+    ("pubs", "2014-byrne-rs1h", "5bce5079-421b-482b-a072-b5a7c340d567/rs1h.jpg", 800),
+    ("pubs", "2014-day-virus", "4015fc46-333a-4d8c-a564-229ae24dbcee/virus.png", 800),
+    ("pubs", "2013-dalkara-7m8", "4f2f21c3-3585-4b71-b16b-44d51aedddbf/7m8.png", 800),
     # PGTB
     ("pgtb", "logo", "9ab77d0c-9db3-442e-9622-c5d24f0aaca4/logo%2B3.jpg", 1200),
     ("pgtb", "flyer", "cfb9285e-9c62-45b6-9d24-84ca842c4349/FINAL%2BGeneTherapyBootcampFlyer_2024.jpg", 1400),
@@ -64,6 +84,10 @@ IMAGES = [
 ]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) byrnelab-migration"}
+
+
+class AlreadyHave(Exception):
+    """Raised when the file is already on disk, so re-runs stay cheap."""
 
 
 def fetch(path: str) -> bytes:
@@ -76,6 +100,11 @@ def fetch(path: str) -> bytes:
 def process(subdir: str, stem: str, path: str, max_w: int) -> str:
     outdir = os.path.join(ROOT, subdir) if subdir else ROOT
     os.makedirs(outdir, exist_ok=True)
+
+    out_existing = os.path.join(outdir, stem + ".jpg")
+    if os.path.exists(out_existing) and os.path.getsize(out_existing) > 0:
+        # Already downloaded — re-running should only pick up what's new.
+        raise AlreadyHave(out_existing)
 
     raw = fetch(path)
     img = Image.open(BytesIO(raw))
@@ -101,7 +130,7 @@ def process(subdir: str, stem: str, path: str, max_w: int) -> str:
 
 
 def main() -> int:
-    failures = []
+    failures, skipped = [], 0
     total = 0
     for subdir, stem, path, max_w in IMAGES:
         try:
@@ -110,16 +139,20 @@ def main() -> int:
             total += size
             rel = os.path.relpath(out, ROOT)
             print(f"ok    {rel:52s} {size/1024:8.0f} KB")
+        except AlreadyHave:
+            skipped += 1
         except Exception as exc:  # noqa: BLE001
             failures.append((stem, exc))
             print(f"FAIL  {stem:52s} {exc}")
 
-    print(f"\n{len(IMAGES) - len(failures)}/{len(IMAGES)} downloaded, "
-          f"{total/1024/1024:.1f} MB total")
+    fetched = len(IMAGES) - len(failures) - skipped
+    print(f"\n{fetched} new, {skipped} already present, {len(failures)} failed "
+          f"({len(IMAGES)} total) — {total/1024/1024:.1f} MB downloaded")
     if failures:
         print("\nFailed:")
         for stem, exc in failures:
             print(f"  {stem}: {exc}")
+        print("\nIf these are 403s, the Squarespace site may already be cancelled.")
     return 1 if failures else 0
 
 

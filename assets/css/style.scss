@@ -386,14 +386,33 @@ h1, h2, h3, h4 {
    ============================================================ */
 .pub-list { list-style: none; margin: 0; padding: 0; }
 
+/* Year | text | thumbnail. The thumbnail sits on the right in an `auto` track,
+   which collapses to zero width when there's no image. Keeping it on the right
+   means every entry's text starts at the same x, so a list where only a few
+   papers have images still reads as a clean column. */
 .pub {
   padding: 1.15rem 0;
   border-bottom: 1px solid var(--rule);
   display: grid;
-  grid-template-columns: 4.2rem 1fr;
-  gap: 1.2rem;
-  align-items: baseline;
+  grid-template-columns: 4.2rem minmax(0, 1fr) auto;
+  gap: 0 1.2rem;
+  align-items: start;
 }
+
+.pub-thumb {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  border-radius: 3px;
+  background: var(--bg-alt);
+  display: block;
+}
+
+.pub-thumb-link {
+  display: block;
+  line-height: 0;
+}
+.pub-thumb-link:hover .pub-thumb { opacity: .88; }
 
 .pub-year {
   font-family: var(--display);
@@ -534,8 +553,11 @@ h1, h2, h3, h4 {
   }
   .project:nth-child(even) .project-media { order: 0; }
 
-  .pub { grid-template-columns: 1fr; gap: .2rem; }
+  /* Stack on narrow screens: year, then thumbnail, then text. */
+  .pub { grid-template-columns: 1fr; gap: .35rem; }
   .pub-year { font-size: .92rem; }
+  .pub-thumb { width: 72px; height: 72px; }
+  .pub-thumb-link, .pub .pub-thumb { order: -1; }
 }
 
 @media (max-width: 560px) {

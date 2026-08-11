@@ -10,9 +10,10 @@ description: Peer-reviewed publications and preprints from the Byrne Lab.
 
   <ol class="pub-list">
     {% for pub in site.data.publications %}
-      <li class="pub">
+      <li class="pub{% if pub.image %} has-thumb{% endif %}">
         <div class="pub-year">{{ pub.year }}</div>
-        <div>
+
+        <div class="pub-body">
           <span class="pub-authors">{{ pub.authors }}</span>
           {% if pub.url %}
             <a class="pub-title" href="{{ pub.url }}" rel="noopener">{{ pub.title }}</a>
@@ -31,6 +32,25 @@ description: Peer-reviewed publications and preprints from the Byrne Lab.
             </div>
           {% endif %}
         </div>
+
+        {% comment %}
+          Optional thumbnail, right-hand column. Decorative — the title link
+          next to it already carries the same destination, so it's hidden from
+          screen readers and skipped in the tab order rather than duplicating
+          the link.
+        {% endcomment %}
+        {% if pub.image %}
+          {% assign thumb = '/assets/images/pubs/' | append: pub.image | relative_url %}
+          {% assign target = pub.url | default: pub.doi | default: pub.pubmed %}
+          {% if target %}
+            <a class="pub-thumb-link" href="{{ target }}" rel="noopener"
+               tabindex="-1" aria-hidden="true">
+              <img class="pub-thumb" src="{{ thumb }}" alt="" loading="lazy" decoding="async">
+            </a>
+          {% else %}
+            <img class="pub-thumb" src="{{ thumb }}" alt="" loading="lazy" decoding="async">
+          {% endif %}
+        {% endif %}
       </li>
     {% endfor %}
   </ol>

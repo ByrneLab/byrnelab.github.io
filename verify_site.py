@@ -47,9 +47,14 @@ def page_files() -> list[str]:
     """Files Jekyll will actually process, honouring _config.yml `exclude`."""
     out = []
     for dirpath, dirnames, filenames in os.walk(ROOT):
+        # Skip build output, dependencies and every dot-directory. Without the
+        # dotfile rule a local .venv drags site-packages into the scan and every
+        # vendored LICENSE.md is reported as a page with no front matter.
         dirnames[:] = [
             d for d in dirnames
-            if d not in {"_site", ".git", "vendor", "node_modules", ".jekyll-cache"}
+            if not d.startswith(".")
+            and d not in {"_site", "vendor", "node_modules", "pub-figures-review",
+                          "__pycache__"}
         ]
         for fn in filenames:
             if not fn.endswith((".html", ".md", ".scss")):
@@ -194,6 +199,9 @@ for pr in data.get("projects") or []:
 for p in data.get("people") or []:
     if p.get("photo"):
         expected_images.add(f"people/{p['photo']}")
+for pub in data.get("publications") or []:
+    if pub.get("image"):
+        expected_images.add(f"pubs/{pub['image']}")
 
 # Literal asset paths written into templates
 LITERAL = re.compile(r"/assets/images/([A-Za-z0-9._\-/]+\.(?:jpg|jpeg|png|svg|webp))")

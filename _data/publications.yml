@@ -107,6 +107,7 @@
   authors: Levochkina M, Beryozkin A, Aweidah H, Beale O, Byrne L
   title: Can Viruses Be Used to Make People Healthy?
   venue: Frontiers for Young Minds 11:1021056
+  image: frontiers-young-minds.jpg
   doi: https://doi.org/10.3389/frym.2023.1021056
 
 - year: 2023
@@ -114,6 +115,8 @@
   title: "PRPF31-retinitis pigmentosa: Challenges and opportunities for clinical translation"
   venue: Vision Research, Volume 213, 108315
   doi: https://doi.org/10.1016/j.visres.2023.108315
+  image: 2023-aweidah.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/37714045/
 
 - year: 2023
   authors: >-
@@ -121,12 +124,15 @@
   title: Adaptable Three-Pin Skull Clamp for Large Animal Research
   venue: HardwareX, e00472
   doi: https://doi.org/10.1016/j.ohx.2023.e00472
+  image: 2023-lohss-clamp.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/37680492/
 
 - year: 2023
   authors: Emilia A Zin, Bilge E Ozturk, Deniz Dalkara, Leah C Byrne
   title: Developing New Vectors for Retinal Gene Therapy
   venue: Cold Spring Harbor Perspectives in Medicine, a041291
   doi: https://doi.org/10.1101/cshperspect.a041291
+  image: 2023-zin.jpg
   pubmed: https://pubmed.ncbi.nlm.nih.gov/36987583/
 
 - year: 2022
@@ -137,6 +143,8 @@
   venue: Nature Communications 13(1):7695
   url: https://www.nature.com/articles/s41467-022-35361-8
   doi: https://doi.org/10.1038/s41467-022-35361-8
+  image: 2022-xi-erg.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/36509783/
 
 - year: 2022
   authors: >-
@@ -149,6 +157,8 @@
   venue: npj Regenerative Medicine 7(1):39
   url: https://www.nature.com/articles/s41536-022-00235-6
   doi: https://doi.org/10.1038/s41536-022-00235-6
+  image: 2022-rodrigues-organoid.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/35974011/
 
 - year: 2022
   authors: >-
@@ -159,6 +169,8 @@
     human retinal explants
   venue: Molecular Therapy — Methods & Clinical Development
   doi: https://doi.org/10.1016/j.omtm.2022.04.014
+  image: 2022-xi-retina.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/35615708/
 
 - year: 2022
   authors: >-
@@ -170,6 +182,8 @@
   venue: eLife 11:e69571
   url: https://elifesciences.org/articles/69571
   doi: https://doi.org/10.7554/eLife.69571
+  image: 2022-lawler.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/35576146/
 
 - year: 2022
   authors: >-
@@ -182,6 +196,8 @@
   venue: PNAS 119(13):e2117038119
   url: https://www.pnas.org/doi/full/10.1073/pnas.2117038119
   doi: https://doi.org/10.1073/pnas.2117038119
+  image: 2022-miyadera.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/35316139/
 
 - year: 2021
   authors: >-
@@ -193,9 +209,11 @@
   title: >-
     scAAVengr, a transcriptome-based pipeline for quantitative ranking of
     engineered AAVs with single-cell resolution
-  venue: eLife 10:e64175
+  venue: "eLife 10:e64175"
+  image: umap.jpg
   url: https://elifesciences.org/articles/64175
   doi: https://doi.org/10.7554/eLife.64175
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/34664552/
 
 - year: 2021
   authors: >-
@@ -206,12 +224,16 @@
   venue: Current Biology
   url: https://www.sciencedirect.com/science/article/pii/S0960982221013695
   doi: https://doi.org/10.1016/j.cub.2021.10.015
+  image: 2021-he-striatum.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/34727523/
 
 - year: 2021
   authors: Gemayel M, Byrne LC, Ciulla T, Sahel JA
   title: "Delivery of Genetic Information: Viral Vector and Nonviral Vector Gene Therapies"
   venue: International Ophthalmology Clinics 61(3):35-57
   doi: https://doi.org/10.1097/IIO.0000000000000360
+  image: 2021-gemayel.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/34196317/
 
 - year: 2021
   authors: >-
@@ -232,6 +254,7 @@
   venue: "JCI Insight 5(10):e135112"
   url: https://insight.jci.org/articles/view/135112
   doi: https://doi.org/10.1172/jci.insight.135112
+  image: 2020-byrne-fovea.jpg
   pubmed: https://pubmed.ncbi.nlm.nih.gov/32271719/
 
 - year: 2018
@@ -241,6 +264,7 @@
     Capsids in Nonhuman Primate Retinas
   venue: "Methods in Molecular Biology 1715:239-249"
   url: https://link.springer.com/protocol/10.1007/978-1-4939-7522-8_17
+  image: 2018-day-nab.jpg
   pubmed: https://pubmed.ncbi.nlm.nih.gov/29188518/
 
 - year: 2017
@@ -287,7 +311,9 @@
     Rod-derived cone viability factor promotes cone survival by stimulating
     aerobic glycolysis
   venue: "Cell 161(4):817-32"
-  pubmed: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382269/
+  image: rdcvf.jpg
+  doi: https://doi.org/10.1016/j.cell.2015.03.023
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/25957687/
 
 - year: 2015
   authors: Byrne LC, Lin YJ, Lee T, Schaffer DV, Flannery JG
@@ -296,6 +322,7 @@
     mouse retina is determined by age
   venue: "Molecular Therapy 23(2):290-6"
   doi: https://doi.org/10.1038/mt.2014.181
+  image: 2015-byrne-aav9.jpg
   pubmed: https://pubmed.ncbi.nlm.nih.gov/25224467/
 
 - year: 2015
@@ -315,7 +342,9 @@
     Viral-mediated RdCVF and RdCVFL expression protects cone and rod
     photoreceptors in retinal degeneration
   venue: "Journal of Clinical Investigation 125(1):105-16"
-  pubmed: https://pubmed.ncbi.nlm.nih.gov/24694538/
+  doi: https://doi.org/10.1172/JCI65654
+  image: 2015-byrne-rdcvf-cones.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/25415434/
 
 - year: 2014
   authors: >-
@@ -325,13 +354,18 @@
     Retinoschisin gene therapy in photoreceptors, Müller glia or all retinal
     cells in the Rs1h-/- mouse
   venue: "Gene Therapy 21(6):585-92"
-  pubmed: https://pubmed.ncbi.nlm.nih.gov/24664759/
+  doi: https://doi.org/10.1038/gt.2014.31
+  image: 2014-byrne-rs1h.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/24694538/
 
 - year: 2014
   authors: Day TP, Byrne LC, Schaffer DV, Flannery JG
   title: Advances in AAV Vector Development for Gene Therapy in the Retina
   venue: "Advances in Experimental Medicine and Biology 801:687-93"
   note: TP Day and LC Byrne contributed equally
+  doi: https://doi.org/10.1007/978-1-4614-3209-8_86
+  image: 2014-day-virus.jpg
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/24664759/
 
 - year: 2013
   authors: >-
@@ -343,6 +377,7 @@
   venue: "Science Translational Medicine 5(189):189ra76"
   note: D Dalkara and LC Byrne contributed equally
   url: https://www.science.org/doi/10.1126/scitranslmed.3005708
+  image: 2013-dalkara-7m8.jpg
   pubmed: https://pubmed.ncbi.nlm.nih.gov/23761039/
 
 - year: 2013
