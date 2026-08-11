@@ -10,8 +10,16 @@ baseurl: ""
 institution: University of Pittsburgh
 address: Byrne Lab, Mercy Pavilion, 1622 Locust St, Pittsburgh, PA 15219
 
-# Full publication list (NCBI My Bibliography)
-bibliography_url: https://www.ncbi.nlm.nih.gov/sites/myncbi/1b1OChnllzr5w/bibliography/44716067/public/?direction=ascending&sort=date
+# Live PubMed author search — updates itself as new papers are indexed, unlike
+# the My NCBI bibliography (which stopped being curated in 2021).
+#
+# If Leah has an ORCID, switching to `ORCID[auid]` here would be strictly
+# better: it returns exactly her papers with no name collisions.
+#   https://pubmed.ncbi.nlm.nih.gov/?term=0000-0000-0000-0000%5Bauid%5D&sort=date
+bibliography_url: https://pubmed.ncbi.nlm.nih.gov/?term=%22Byrne+LC%22%5BAuthor%5D&sort=date
+
+# The old bibliography, kept for reference:
+# https://www.ncbi.nlm.nih.gov/myncbi/1b1OChnllzr5w/bibliography/public/
 
 nav:
   - title: Home

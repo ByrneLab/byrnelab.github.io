@@ -257,6 +257,17 @@
   image: 2020-byrne-fovea.jpg
   pubmed: https://pubmed.ncbi.nlm.nih.gov/32271719/
 
+- year: 2020
+  authors: >-
+    Liu X, Feng B, Vats A, Tang H, Seibel W, Swaroop M, Tawa G, Zheng W,
+    Byrne L, Schurdak M, Chen Y
+  title: >-
+    Pharmacological clearance of misfolded rhodopsin for the treatment of
+    RHO-associated retinitis pigmentosa
+  venue: "FASEB Journal 34(8):10146-10167"
+  doi: https://doi.org/10.1096/fj.202000282R
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/32536017/
+
 - year: 2018
   authors: Day TP, Byrne LC, Flannery JG, Schaffer DV
   title: >-
@@ -291,6 +302,14 @@
   note: Commentary
   doi: https://doi.org/10.1126/scitranslmed.aan2783
   pubmed: https://pubmed.ncbi.nlm.nih.gov/28446683/
+
+- year: 2017
+  authors: Byrne L
+  title: Rounding up sickle cells with gene therapy
+  venue: "Science Translational Medicine 9(381):eaam9864"
+  note: Commentary
+  doi: https://doi.org/10.1126/scitranslmed.aam9864
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/28298423/
 
 - year: 2016
   authors: Shen SQ, Myers CA, Hughes AE, Byrne LC, Flannery JG, Corbo JC
