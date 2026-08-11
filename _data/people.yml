@@ -1,0 +1,79 @@
+# Lab members.
+#
+# To add someone:
+#   1. Drop a square-ish photo in assets/images/people/ (e.g. jane-doe.jpg)
+#   2. Add an entry below. `group` controls which heading they appear under
+#      (see the group order in people.md). `links` is optional.
+#
+# - name: Jane Doe
+#   role: Postdoctoral fellow
+#   photo: jane-doe.jpg
+#   group: postdocs
+#   links:
+#     - label: Google Scholar
+#       url: https://scholar.google.com/...
+
+- name: Alessandra Larimer-Picciani
+  role: MD/PhD candidate
+  photo: alessandra-larimer-picciani.jpg
+  group: students
+
+- name: Anfisa Ayalon
+  role: Postdoctoral fellow
+  photo: anfisa-ayalon.jpg
+  group: postdocs
+
+- name: Aman Virmani
+  role: Bioinformatics specialist
+  photo: aman-virmani.jpg
+  group: staff
+
+- name: Katelin Samski
+  role: Postdoctoral fellow
+  photo: katelin-samski.jpg
+  group: postdocs
+
+- name: Hamzah Aweidah
+  role: Postdoctoral fellow
+  photo: hamzah-aweidah.jpg
+  group: postdocs
+
+- name: Lora Waybright
+  role: Project manager
+  photo: lora-waybright.jpg
+  group: staff
+
+- name: Sushma Sappa
+  role: AAV packaging specialist
+  photo: sushma-sappa.jpg
+  group: staff
+
+- name: Avigail Beryozkin
+  role: Postdoctoral fellow
+  photo: avigail-beryozkin.jpg
+  group: postdocs
+
+- name: Max Lohss
+  role: PSTP medical student
+  photo: max-lohss.jpg
+  group: students
+
+- name: Jean-Baptiste Couzy
+  role: Project manager
+  photo: jean-baptiste-couzy.jpg
+  group: staff
+
+- name: Wyatt Kriebel
+  role: Undergraduate researcher
+  photo: wyatt-kriebel.jpg
+  group: students
+
+- name: Annapurni Sriram
+  role: Medical student
+  photo: annapurni-sriram.jpg
+  group: students
+
+- name: Mahija Nukala
+  role: Undergraduate researcher
+  photo: mahija-nukala.jpg
+  group: students

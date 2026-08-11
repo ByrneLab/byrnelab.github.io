@@ -1,0 +1,23 @@
+---
+layout: default
+title: Science
+permalink: /science/
+description: Research in the Byrne Lab — retinal gene therapy, AAV vector engineering, and a public database of AAV tropism in the primate eye.
+---
+
+<div class="wrap page">
+  <h1 class="page-title">Byrne Lab Projects</h1>
+
+  {% for project in site.data.projects %}
+    <article class="project">
+      <div class="project-media">
+        <img src="{{ '/assets/images/science/' | append: project.image | relative_url }}"
+             alt="{{ project.alt | escape }}" loading="lazy" decoding="async">
+      </div>
+      <div class="project-body">
+        <h2 class="project-title">{{ project.title }}</h2>
+        {{ project.body | markdownify }}
+      </div>
+    </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title and page.url != "/" %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <meta property="og:title" content="{% if page.title and page.url != '/' %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{{ page.description | default: site.description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/assets/images/hero-fovea.jpg' | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  {% include header.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    // Mobile navigation toggle
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.querySelector('.site-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var open = nav.classList.toggle('is-open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+    })();
+  </script>
+  {% if page.lightbox %}
+  <script>
+    // Lightweight gallery lightbox — no dependencies.
+    (function () {
+      var figures = Array.prototype.slice.call(
+        document.querySelectorAll('.gallery-item')
+      );
+      if (!figures.length) return;
+
+      var overlay = document.createElement('div');
+      overlay.className = 'lightbox';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('aria-label', 'Image viewer');
+      overlay.innerHTML =
+        '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+        '<button class="lightbox-prev" aria-label="Previous image">&#8249;</button>' +
+        '<img class="lightbox-img" alt="">' +
+        '<button class="lightbox-next" aria-label="Next image">&#8250;</button>';
+      document.body.appendChild(overlay);
+
+      var imgEl = overlay.querySelector('.lightbox-img');
+      var index = -1;
+      var lastFocus = null;
+
+      function show(i) {
+        index = (i + figures.length) % figures.length;
+        var src = figures[index].getAttribute('data-full');
+        var alt = figures[index].querySelector('img').getAttribute('alt') || '';
+        imgEl.setAttribute('src', src);
+        imgEl.setAttribute('alt', alt);
+      }
+
+      function open(i) {
+        lastFocus = document.activeElement;
+        show(i);
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        overlay.querySelector('.lightbox-close').focus();
+      }
+
+      function close() {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+        imgEl.setAttribute('src', '');
+        if (lastFocus) lastFocus.focus();
+      }
+
+      figures.forEach(function (fig, i) {
+        fig.addEventListener('click', function () { open(i); });
+        fig.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            open(i);
+          }
+        });
+      });
+
+      overlay.querySelector('.lightbox-close').addEventListener('click', close);
+      overlay.querySelector('.lightbox-next').addEventListener('click', function (e) {
+        e.stopPropagation();
+        show(index + 1);
+      });
+      overlay.querySelector('.lightbox-prev').addEventListener('click', function (e) {
+        e.stopPropagation();
+        show(index - 1);
+      });
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) close();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowRight') show(index + 1);
+        if (e.key === 'ArrowLeft') show(index - 1);
+      });
+    })();
+  </script>
+  {% endif %}
+</body>
+</html>

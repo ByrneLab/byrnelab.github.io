@@ -1,0 +1,57 @@
+title: Byrne Lab Science
+tagline: Gene therapy for blindness
+description: >-
+  The Byrne Lab at the University of Pittsburgh develops gene therapies for
+  retinal disease, engineering AAV viral vectors to treat inherited and
+  age-related forms of blindness.
+url: "https://www.byrnelab.science"
+baseurl: ""
+
+institution: University of Pittsburgh
+address: Byrne Lab, Mercy Pavilion, 1622 Locust St, Pittsburgh, PA 15219
+
+social:
+  twitter: https://twitter.com/ByrneLabScience
+  mastodon: https://sciencemastodon.com/@ByrneLabScience
+
+# Full publication list (NCBI My Bibliography)
+bibliography_url: https://www.ncbi.nlm.nih.gov/sites/myncbi/1b1OChnllzr5w/bibliography/44716067/public/?direction=ascending&sort=date
+
+nav:
+  - title: Home
+    url: /
+  - title: Science
+    url: /science/
+  - title: People
+    url: /people/
+  - title: Publications
+    url: /publications/
+  - title: Join
+    url: /join/
+  - title: Contact
+    url: /contact/
+  - title: PGTB 2024
+    url: /pgtb/
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - fetch_images.py
+  - verify_site.py
+  - fetch.log
+  - vendor
+  - .github

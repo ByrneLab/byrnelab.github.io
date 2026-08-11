@@ -1,0 +1,29 @@
+---
+layout: default
+title: Home
+lightbox: true
+---
+
+<section class="hero">
+  <img class="hero-img"
+       src="{{ '/assets/images/hero-fovea.jpg' | relative_url }}"
+       alt="Fluorescence micrograph of the fovea">
+  <div class="hero-inner">
+    <p class="hero-eyebrow">{{ site.tagline }}</p>
+    <h1 class="hero-title">The Byrne Lab</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="gallery">
+      {% for img in site.data.gallery %}
+        {% assign src = '/assets/images/gallery/' | append: img.file | relative_url %}
+        <figure class="gallery-item" data-full="{{ src }}" tabindex="0" role="button"
+                aria-label="View image: {{ img.alt | escape }}">
+          <img src="{{ src }}" alt="{{ img.alt | escape }}" loading="lazy" decoding="async">
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>

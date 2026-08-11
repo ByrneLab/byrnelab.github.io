@@ -1,0 +1,42 @@
+---
+layout: default
+title: Publications
+permalink: /publications/
+description: Peer-reviewed publications and preprints from the Byrne Lab.
+---
+
+<div class="wrap page">
+  <h1 class="page-title">Publications</h1>
+
+  <ol class="pub-list">
+    {% for pub in site.data.publications %}
+      <li class="pub">
+        <div class="pub-year">{{ pub.year }}</div>
+        <div>
+          <span class="pub-authors">{{ pub.authors }}</span>
+          {% if pub.url %}
+            <a class="pub-title" href="{{ pub.url }}" rel="noopener">{{ pub.title }}</a>
+          {% elsif pub.doi %}
+            <a class="pub-title" href="{{ pub.doi }}" rel="noopener">{{ pub.title }}</a>
+          {% else %}
+            <span class="pub-title">{{ pub.title }}</span>
+          {% endif %}
+          <span class="pub-venue">{{ pub.venue }}</span>
+          {% if pub.note %}<span class="pub-venue"> &middot; {{ pub.note }}</span>{% endif %}
+
+          {% if pub.doi or pub.pubmed %}
+            <div class="pub-links">
+              {% if pub.doi %}<a href="{{ pub.doi }}" rel="noopener">DOI</a>{% endif %}
+              {% if pub.pubmed %}<a href="{{ pub.pubmed }}" rel="noopener">PubMed</a>{% endif %}
+            </div>
+          {% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <p class="pub-note">
+    For a complete list of publications, see the
+    <a href="{{ site.bibliography_url }}" rel="noopener">full NCBI bibliography</a>.
+  </p>
+</div>

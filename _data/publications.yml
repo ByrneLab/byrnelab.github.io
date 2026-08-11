@@ -1,0 +1,201 @@
+# Publications, newest first. The page renders them in this order and groups
+# by `year`, so keep new entries at the top.
+#
+# Fields: year, authors, title, venue, url (optional), doi (optional),
+#         pubmed (optional), note (optional, e.g. "Preprint", "* equal contribution")
+
+- year: 2024
+  authors: >-
+    Jing He, BaDoi N Phan, Willa G Kerkhoff, Aydin Alikaya, Olivia R Brull,
+    J Megan Fredericks, Tao Hong, Morgan Sedorovitz, Chaitanya Srinivasan,
+    Michael J Leone, Olivia M Wirfel, Samuel Dauby, Rachel K Tittle, Meng K Lin,
+    Andreea C Bostan, Bryan M Hooks, Omar A Gharbawie, Leah C Byrne,
+    Andreas R Pfenning, William R Stauffer
+  title: Cell Type Specific Enhancers for Dorsolateral Prefrontal Cortex
+  venue: bioRxiv 2024.12.01.626253
+  note: Preprint
+  doi: https://doi.org/10.1101/2024.12.01.626253
+
+- year: 2023
+  authors: Levochkina M, Beryozkin A, Aweidah H, Beale O, Byrne L
+  title: Can Viruses Be Used to Make People Healthy?
+  venue: Frontiers for Young Minds 11:1021056
+  doi: https://doi.org/10.3389/frym.2023.1021056
+
+- year: 2023
+  authors: Hamzah Aweidah, Zhouhuan Xi, José-Alain Sahel, Leah C. Byrne
+  title: "PRPF31-retinitis pigmentosa: Challenges and opportunities for clinical translation"
+  venue: Vision Research, Volume 213, 108315
+  doi: https://doi.org/10.1016/j.visres.2023.108315
+
+- year: 2023
+  authors: >-
+    Lohss MB, Ho J, Naylor N, Cashman S, Fu R, Stefko ST, Byrne LC
+  title: Adaptable Three-Pin Skull Clamp for Large Animal Research
+  venue: HardwareX, e00472
+  doi: https://doi.org/10.1016/j.ohx.2023.e00472
+
+- year: 2023
+  authors: Emilia A Zin, Bilge E Ozturk, Deniz Dalkara, Leah C Byrne
+  title: Developing New Vectors for Retinal Gene Therapy
+  venue: Cold Spring Harbor Perspectives in Medicine, a041291
+  doi: https://doi.org/10.1101/cshperspect.a041291
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/36987583/
+
+- year: 2022
+  authors: Xi Z, Vats A, Sahel JA, Chen Y, Byrne LC
+  title: >-
+    Gene augmentation prevents retinal degeneration in a CRISPR/Cas9-based
+    mouse model of PRPF31 retinitis pigmentosa
+  venue: Nature Communications 13(1):7695
+  url: https://www.nature.com/articles/s41467-022-35361-8
+  doi: https://doi.org/10.1038/s41467-022-35361-8
+
+- year: 2022
+  authors: >-
+    Rodrigues A, Slembrouck-Brec A, Nanteau C, Terray A, Tymoshenko Y, Zagar Y,
+    Reichman S, Xi Z, Sahel JA, Fouquet S, Orieux G, Nandrot EF, Byrne LC,
+    Audo I, Roger JE, Goureau O
+  title: >-
+    Modeling PRPF31 retinitis pigmentosa using retinal pigment epithelium and
+    organoids combined with gene augmentation rescue
+  venue: npj Regenerative Medicine 7(1):39
+  url: https://www.nature.com/articles/s41536-022-00235-6
+  doi: https://doi.org/10.1038/s41536-022-00235-6
+
+- year: 2022
+  authors: >-
+    Zhouhuan Xi, Bilge E. Öztürk, Molly E. Johnson, Serhan Turunç,
+    William R. Stauffer, Leah C. Byrne
+  title: >-
+    Quantitative single-cell transcriptome-based ranking of engineered AAVs in
+    human retinal explants
+  venue: Molecular Therapy — Methods & Clinical Development
+  doi: https://doi.org/10.1016/j.omtm.2022.04.014
+
+- year: 2022
+  authors: >-
+    Alyssa J Lawler, Easwaran Ramamurthy, Ashley R Brown, Naomi Shin, Yeonju Kim,
+    Noelle Toong, Irene M Kaplow, Morgan Wirthlin, Xiaoyu Zhang, BaDoi N Phan,
+    Grant A Fox, Kirsten Wade, Jing He, Bilge Esin Ozturk, Leah C Byrne,
+    William R Stauffer, Kenneth N Fish, Andreas R Pfenning
+  title: Machine learning sequence prioritization for cell type-specific enhancer design
+  venue: eLife 11:e69571
+  url: https://elifesciences.org/articles/69571
+  doi: https://doi.org/10.7554/eLife.69571
+
+- year: 2022
+  authors: >-
+    Miyadera K, Santana E, Roszak K, Iffrig S, Visel M, Iwabe S, Boyd RF,
+    Bartoe JT, Sato Y, Gray A, Ripolles-Garcia A, Dufour VL, Byrne LC,
+    Flannery JG, Beltran WA, Aguirre GD
+  title: >-
+    Targeting ON-bipolar cells by AAV gene therapy stably reverses
+    LRIT3-congenital stationary night blindness
+  venue: PNAS 119(13):e2117038119
+  url: https://www.pnas.org/doi/full/10.1073/pnas.2117038119
+  doi: https://doi.org/10.1073/pnas.2117038119
+
+- year: 2021
+  authors: >-
+    Bilge E. Ozturk, Molly E. Johnson, Michael Kleyman, Serhan Turunc, Jing He,
+    Sara Jabalameli, Zhouhuan Xi, Meike Visel, Valerie L. Dufour, Simone Iwabe,
+    Felipe Pompeo Marinho, Gustavo D. Aguirre, Jose-Alain Sahel,
+    David V. Schaffer, Andreas R. Pfenning, John G. Flannery,
+    William A. Beltran, William R. Stauffer, Leah C. Byrne
+  title: >-
+    scAAVengr, a transcriptome-based pipeline for quantitative ranking of
+    engineered AAVs with single-cell resolution
+  venue: eLife 10:e64175
+  url: https://elifesciences.org/articles/64175
+  doi: https://doi.org/10.7554/eLife.64175
+
+- year: 2021
+  authors: >-
+    Jing He, Michael Kleyman, Jianjiao Chen, Aydin Alikaya,
+    Kathryn M. Rothenhoefer, Bilge Esin Ozturk, Morgan Wirthlin, Kenneth Fish,
+    Leah C. Byrne, Andreas R. Pfenning, William R. Stauffer
+  title: Transcriptional Diversity of Medium Spiny Neurons in the Primate Striatum
+  venue: Current Biology
+  url: https://www.sciencedirect.com/science/article/pii/S0960982221013695
+  doi: https://doi.org/10.1016/j.cub.2021.10.015
+
+- year: 2021
+  authors: Gemayel M, Byrne LC, Ciulla T, Sahel JA
+  title: "Delivery of Genetic Information: Viral Vector and Nonviral Vector Gene Therapies"
+  venue: International Ophthalmology Clinics 61(3):35-57
+  doi: https://doi.org/10.1097/IIO.0000000000000360
+
+- year: 2020
+  authors: >-
+    Byrne LC, Day TP, Visel M, Fortuny C, Dalkara D, Merigan WH, Schaffer DV,
+    Flannery JG
+  title: In vivo directed evolution of AAV in the primate retina
+  venue: JCI Insight
+  url: https://insight.jci.org/articles/view/135112
+  doi: https://doi.org/10.1172/jci.insight.135112
+
+- year: 2018
+  authors: Day TP, Byrne LC, Flannery JG, Schaffer DV
+  title: >-
+    Screening for Neutralizing Antibodies Against Natural and Engineered AAV
+    Capsids in Nonhuman Primate Retinas
+  venue: "Methods in Molecular Biology 1715:239-249"
+  url: https://link.springer.com/protocol/10.1007/978-1-4939-7522-8_17
+
+- year: 2015
+  authors: >-
+    Aït-Ali N, Fridlich R, Millet-Puel G, Clérin E, Delalande F, Jaillard C,
+    Blond F, Perrocheau L, Reichman S, Byrne LC, Olivier-Bandini A, Bellalou J,
+    Moyse E, Bouillaud F, Nicol X, Dalkara D, van Dorsselaer A, Sahel JA,
+    Léveillard T
+  title: >-
+    Rod-derived cone viability factor promotes cone survival by stimulating
+    aerobic glycolysis
+  venue: "Cell 161(4):817-32"
+  pubmed: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4382269/
+
+- year: 2015
+  authors: Byrne LC, Lee T, Flannery JG, Dalkara D
+  title: >-
+    The expression pattern of systemically injected AAV9 in the developing
+    mouse retina is determined by age
+  venue: "Molecular Therapy 23(2):290-6"
+  doi: https://doi.org/10.1038/mt.2014.181
+
+- year: 2015
+  authors: >-
+    Byrne LC, Dalkara D, Luna G, Fisher SK, Clérin E, Sahel JA, Léveillard T,
+    Flannery JG
+  title: >-
+    Viral-mediated RdCVF and RdCVFL expression protects cone and rod
+    photoreceptors in retinal degeneration
+  venue: "Journal of Clinical Investigation 125(1):105-16"
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/24694538/
+
+- year: 2014
+  authors: >-
+    Byrne LC, Oztürk BE, Lee T, Fortuny C, Visel M, Dalkara D, Schaffer DV,
+    Flannery JG
+  title: >-
+    Retinoschisin gene therapy in photoreceptors, Müller glia or all retinal
+    cells in the Rs1h-/- mouse
+  venue: "Gene Therapy 21(6):585-92"
+  pubmed: https://pubmed.ncbi.nlm.nih.gov/24664759/
+
+- year: 2014
+  authors: Day TP, Byrne LC, Schaffer DV, Flannery JG
+  title: Advances in AAV Vector Development for Gene Therapy in the Retina
+  venue: "Advances in Experimental Medicine and Biology 801:687-93"
+  note: TP Day and LC Byrne contributed equally
+
+- year: 2013
+  authors: >-
+    Dalkara D, Byrne LC, Klimczak RR, Visel M, Yin L, Merigan WH, Flannery JG,
+    Schaffer DV
+  title: >-
+    In vivo-directed evolution of a new adeno-associated virus for therapeutic
+    outer retinal gene delivery from the vitreous
+  venue: "Science Translational Medicine 5(189):189ra76"
+  note: D Dalkara and LC Byrne contributed equally
+  url: https://www.science.org/doi/10.1126/scitranslmed.3005708

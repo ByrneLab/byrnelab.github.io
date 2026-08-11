@@ -1,0 +1,27 @@
+{% assign person = include.person %}
+<figure class="person">
+  {% if person.photo %}
+    <img class="person-photo"
+         src="{{ '/assets/images/people/' | append: person.photo | relative_url }}"
+         alt="{{ person.name | escape }}" loading="lazy" decoding="async">
+  {% else %}
+    {% comment %}
+      No photo yet — render initials rather than a broken image, so adding
+      someone to people.yml before you have a headshot still looks right.
+    {% endcomment %}
+    {% assign parts = person.name | split: " " %}
+    {% capture initials %}{% for part in parts %}{{ part | slice: 0 }}{% endfor %}{% endcapture %}
+    <div class="person-photo person-initials" aria-hidden="true">{{ initials | upcase }}</div>
+  {% endif %}
+  <figcaption>
+    <p class="person-name">{{ person.name }}</p>
+    <p class="person-role">{{ person.role }}</p>
+    {% if person.links %}
+      <p class="person-links">
+        {% for link in person.links %}
+          <a href="{{ link.url }}" rel="noopener">{{ link.label }}</a>
+        {% endfor %}
+      </p>
+    {% endif %}
+  </figcaption>
+</figure>

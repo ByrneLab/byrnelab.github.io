@@ -1,0 +1,46 @@
+---
+layout: default
+title: People
+permalink: /people/
+description: Members of the Byrne Lab at the University of Pittsburgh.
+---
+
+<div class="wrap page">
+  <h1 class="page-title">People</h1>
+
+  {% comment %}
+    Group order and headings. A person's `group` in _data/people.yml must
+    match one of these keys; anyone with an unrecognised or missing group
+    falls into the "Other" bucket below so they never silently disappear.
+  {% endcomment %}
+  {% assign group_keys = "pi,postdocs,students,staff" | split: "," %}
+  {% assign group_names = "Principal Investigator,Postdoctoral Fellows,Students,Staff" | split: "," %}
+
+  {% for key in group_keys %}
+    {% assign members = site.data.people | where: "group", key %}
+    {% if members.size > 0 %}
+      <h2 class="people-group-title">{{ group_names[forloop.index0] }}</h2>
+      <div class="people-grid">
+        {% for person in members %}
+          {% include person.html person=person %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  {% assign ungrouped = "" | split: "," %}
+  {% for person in site.data.people %}
+    {% unless group_keys contains person.group %}
+      {% assign ungrouped = ungrouped | push: person %}
+    {% endunless %}
+  {% endfor %}
+
+  {% if ungrouped.size > 0 %}
+    <h2 class="people-group-title">Other</h2>
+    <div class="people-grid">
+      {% for person in ungrouped %}
+        {% include person.html person=person %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

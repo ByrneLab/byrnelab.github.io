@@ -1,0 +1,33 @@
+# Home page image mosaic. Order here is the order on the page.
+# Images live in assets/images/gallery/.
+
+- file: supp-fig-jb.jpg
+  alt: Supplementary figure showing retinal transduction data
+- file: aav.jpg
+  alt: Structural model of an AAV capsid
+- file: retina-section.jpg
+  alt: Retinal cross-section stained with DAPI, CAR594 and PKC-alpha
+- file: mosaic.jpg
+  alt: Wide-field mosaic of a transduced retina
+- file: capsid.jpg
+  alt: Protein structure of the surface of a virus
+- file: umap.jpg
+  alt: UMAP projection of single-cell retinal transcriptomes
+- file: cones.jpg
+  alt: Fluorescently labelled cone photoreceptors
+- file: mol-ther-cover.jpg
+  alt: Molecular Therapy journal cover image from the lab
+- file: mouse-retina-3.jpg
+  alt: Mouse retina expressing a fluorescent reporter
+- file: k9-library.jpg
+  alt: AAV library screening in a large-animal retina
+- file: two-minute.jpg
+  alt: Byrne Lab outreach illustration
+- file: mouse-retina-2.jpg
+  alt: Flat-mounted mouse retina with fluorescent transgene expression
+- file: dual-injections.jpg
+  alt: Dual AAV injection showing eGFP and mCherry expression with DAPI
+- file: rpe.jpg
+  alt: Retinal pigment epithelium cells in culture
+- file: k912-montage.jpg
+  alt: Montage of retinal imaging data

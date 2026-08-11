@@ -1,0 +1,46 @@
+# Research areas shown on the Science page.
+# `body` accepts Markdown (links, emphasis) and is rendered via markdownify.
+
+- title: Gene therapy
+  image: gene-therapy.jpg
+  alt: Fluorescence micrograph of retinal cone photoreceptors
+  body: >-
+    The Byrne Lab develops gene therapies for retinal disease, including a
+    diverse group of blinding disorders that have a profound impact on the
+    quality of life of patients. There are currently no effective treatments
+    for most forms of inherited retinal degeneration. However, gene therapy,
+    in which therapeutic genetic material is transferred to cells, is a highly
+    promising approach to treating retinal disease. The Byrne lab is exploring
+    gene augmentation, optogenetics, and genome editing approaches to treat
+    inherited and age-related forms of blindness.
+
+- title: Vector design
+  image: vector-design.jpg
+  alt: Protein structure of the surface of a virus
+  body: >-
+    The most effective approach to deliver therapeutic genes to cells is using
+    viruses, which have evolved over millions of years as highly efficient gene
+    delivery systems. In viral vector-mediated gene therapy, the viral genome
+    is replaced with a cassette containing a promoter driving expression of a
+    therapeutic transgene. The virus is then injected into the tissue, where it
+    infects cells, carrying its genetic payload to the nucleus, and resulting in
+    expression of a therapeutic protein. However, the viruses found in nature
+    are not naturally suited to deliver gene therapies to retinal cells. The
+    Byrne Lab uses naturally occurring viruses as starting material, and
+    implements high throughput, computationally guided and structurally informed
+    approaches to engineer viral vectors with new abilities to deliver therapies
+    to cells in the eye.
+
+- title: Public database of AAV tropism
+  image: aav-database.jpg
+  alt: UMAP projection of single-cell transcriptomic data
+  body: >-
+    Our group is working to create a publicly available online database of AAV
+    tropism in the primate eye. We are leveraging our
+    [scAAVengr](https://elifesciences.org/articles/64175) AAV engineering
+    platform to determine the number and types of cells targeted by the most
+    widely used and promising engineered AAV serotypes at clinically relevant
+    titers. This database will provide quantitative information, with
+    single-cell resolution, about the level of transgene expression achieved,
+    in order to guide future clinical trials. Watch this space for further
+    information.
